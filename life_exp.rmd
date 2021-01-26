@@ -19,5 +19,14 @@ gapminder_unfiltered %>%
   arrange(year)
 ```
 
+Adim here practicing the fork and clone exercise
+```{r}
+#Plot Life Expectancy by year
 
+sumdat %>%
+  ggplot(mapping = aes(x = year, y = lifeExp)) +
+  geom_point(aes(color = country)) +
+  geom_smooth(method = lm, se = FALSE) +
+  theme_bw()
+```
 
